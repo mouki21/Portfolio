@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet</title>
+</head>
+<body>
+
+    <a href="https://docs.google.com/presentation/d/1i4WCGf5RO_giDa5IHWAbUuGRVvRb1to1FNf0GKgfbe8/edit#slide=id.g155c4badd97_0_120"
+    target="_blank"><h4>Lien pour le sujet</h4></a>
+    <br>
+
+
+    <div id="datetime"></div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString('fr-FR');
+            const time = now.toLocaleTimeString('fr-FR');
+            document.getElementById('datetime').textContent = `Date : ${date} - Heure : ${time}`;
+        }
+
+        // Mettre à jour la date et l'heure toutes les secondes
+        setInterval(updateDateTime, 1000);
+
+        // Initialiser l'affichage immédiatement
+        updateDateTime();
+    </script>
+
+    
+    <a href="a_historique.html" target="_blank"><h3>Voir historique des mesures</h3></a>
+
+    <h2><u>Cours</u></h2>
+    <table border="1px" style="background-color: black;">
+        <tr align="center" style="background-color: lightblue;">
+            <th width="100">Température</th>
+            <th width="100">Lumière</th>
+            <th width="100">Pression</th>
+            <th width="100">Humitidé</th>
+        </tr>
+
+        <tr align="center" style="background-color: aliceblue;">
+            <td>x C°</td>
+            <td>x cd</td>
+            <td>x Pa</td>
+            <td>x g/mᵌ</td>
+        </tr>
+
+        <tr align="center" style="background-color: aliceblue;">
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+
+    </table>
+
+    <h2><u>Gymnase</u></h2>
+    <table border="1px" style="background-color: black;">
+        <tr align="center" style="background-color: lightblue;">
+            <th width="100">Bruit</th>
+            <th width="100">CO2</th>
+            <th width="100">Nombre de places</th>
+            <th width="100">Autre</th>
+        </tr>
+
+        <tr align="center" style="background-color: aliceblue;">
+            <td>x dB</td>
+            <td>x ppm</td>
+            <td>x/50</td>
+            <td>x</td>
+        </tr>
+
+        <tr align="center" style="background-color: aliceblue;">
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
