@@ -7,12 +7,14 @@
 </head>
 <body>
 
+    <header style="background-color:white;">
+        <h1>École Jean Jaurès</h1>
+        
     <a href="https://docs.google.com/presentation/d/1i4WCGf5RO_giDa5IHWAbUuGRVvRb1to1FNf0GKgfbe8/edit#slide=id.g155c4badd97_0_120"
     target="_blank"><h4>Lien pour le sujet</h4></a>
-    <br>
-
-
+    <a href="a_historique.html" target="_blank"><h3>Voir historique des mesures</h3></a>
     <div id="datetime"></div>
+    </header>
 
     <script>
         function updateDateTime() {
@@ -29,10 +31,26 @@
         updateDateTime();
     </script>
 
-    
-    <a href="a_historique.html" target="_blank"><h3>Voir historique des mesures</h3></a>
+    <script>
+    function afficherEmoji(valeur) {
+        // Récupère l'élément où l'emoji sera affiché
+        var emojiElement = document.getElementById("emoji");
 
-    <h2><u>Cours</u></h2>
+        // Condition pour vérifier la valeur
+        if (valeur === 0) {
+            emojiElement.textContent = "✅"; // Emoji pour valeur égale à 0
+        } else if (valeur === 1) {
+            emojiElement.textContent = "❌"; // Emoji pour valeur égale à 1
+        } else {
+            emojiElement.textContent = "Valeur invalide"; // Pour les autres valeurs
+        }
+    }
+    </script>
+
+    
+
+
+    <h2><u>Cour</u></h2>
     <table border="1px" style="background-color: black;">
         <tr align="center" style="background-color: lightblue;">
             <th width="100">Température</th>
@@ -80,6 +98,22 @@
             <td>✅</td>
         </tr>
     </table>
+
+    <p>Valeur : <span id="emoji"></span></p>
+
+    <button onclick="afficherEmoji(0)">Valeur 0</button>
+    <button onclick="afficherEmoji(1)">Valeur 1</button>
+
+
+    <br>
+    <br>
+    
+    <footer style="background-color: white;">
+        auteurs: Matteo D'ALENA, Alexandre HALIT, Alexandre HUYNH, Mael SOUPRAYEN <br>
+        &copy; copyright reserved <br>
+        <small><a href="mailto:matteo.dalena@epfedu.fr">matteo.dalena@epfedu.fr</a></small>
+        
+    </footer>
     
 </body>
 </html>
